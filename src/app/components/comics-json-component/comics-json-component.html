@@ -1,0 +1,9 @@
+<p>comics-json-component works!</p>
+<h1>Comics Simples</h1>
+<button (click)="cargarComics()">Cargar comics</button>
+
+@for (comic of arrayComics; track comic.titulo) {
+  <h4 style="color: blue">{{ comic.titulo }}</h4>
+  <p>{{ comic.descripcion }}</p>
+  <img [src]="comic.imagen" [alt]="comic.titulo" style="width: 120px;">
+}
